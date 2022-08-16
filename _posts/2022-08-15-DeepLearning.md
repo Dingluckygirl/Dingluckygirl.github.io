@@ -56,6 +56,20 @@ Chain Rule x~y~z   dz/dx = dz/dy*dy/dx
 倒着算偏微分，可以算
 
 # tips of deep learning
+ 训练不好 good results on training data 
+
+1 new activation function
+
+2 adaptive learning rate
+
+训练好了，测试不好  good results on test data 
+ 
+3 early stopping
+
+4 regularization
+
+5 dropout
+
 ## 1 ReLU （rectified linear unit） ：
 解决前面的层对后面的层影响衰减的问题  训练集很混乱的情况下拟合出结果
 
@@ -100,5 +114,27 @@ learning 除以一个值，
 可能借用惯性，就跳出了local minima
 
 ## 2 RMSProp +  Momentum
-第3
+结合
 
+## 3 early stopping
+停在测试集最小的时候才对
+
+训练集和测试集的最小loss可能不在同一个位置
+
+切一个Validation set  多切出来一个集进行训练
+
+## 4 Regularization
+![](/images/1660656926966.png "偏微分")
+w 最后不会变成0 
+
+这个方法的帮助往往不是很大
+
+L2 L1 可以改成绝对值
+
+## Dropout
+在训练的时候，每一次都对一个神经元挑选，然后丢掉一些神经元，再去训练这些细长的网络。
+
+每一次更新w,b参数前， d都需要从新dropout一次 ， 所以每次训练的都不一样
+
+在测试集的时候不做dropout
+![1660657562419](https://user-images.githubusercontent.com/101853621/184895314-3e2e1e4a-37e2-4e0e-9083-92631f8cbd05.png)
