@@ -1,4 +1,8 @@
-## Deep Learning 
+# Deep Learning 
+
+1. TOC
+{:toc}
+
 # step1 ：
 
 定义一个函数Neural Network: 每个里面都有自己的logistic Regression 有自己的weight and bias，就是神经元的参数，这里用theata表示
@@ -50,5 +54,51 @@ Chain Rule x~y~z   dz/dx = dz/dy*dy/dx
 ![](/images/1660547428270.png "偏微分")
 
 倒着算偏微分，可以算
-1. TOC
-{:toc}
+
+# tips of deep learning
+## 1 ReLU （rectified linear unit） ：
+解决前面的层对后面的层影响衰减的问题  训练集很混乱的情况下拟合出结果
+
+1 快
+
+2 生物上的理由
+
+3 无穷多的sigmoid叠加的结果
+
+4 可以解决vanishing gradient problem 前面的层对后面的层影响衰减
+
+等于0 的拿掉
+![](/images/1660653899765.png "偏微分")
+ReLU 神经元不可微啊，当大于0的时候设为1，小于0 设为0
+
+ReLU 也可以变形，小于0的时候input a=0.01z
+
+## 1 Maxout ：
+
+可以自动学出activation function  
+![](/images/1660654322466.png "偏微分")
+
+maxout 也可以设计b, w 设计出ReLU
+
+1.good on training data
+
+## 2 learning rate Adagrad：
+给它不同的 learning rate 。
+但是Adagrad远远不够  解决学习率的问题
+
+## 2 RMSProp 一个新的方法
+
+learning 除以一个值，
+
+比较相信新的gradient
+
+![](/images/1660655269466.png "偏微分")
+
+## 2 Momentum
+惯性的原理，移动带有一定的惯性
+![](/images/1660655769301.png "偏微分")
+可能借用惯性，就跳出了local minima
+
+## 2 RMSProp +  Momentum
+第3
+
