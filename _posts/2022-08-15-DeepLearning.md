@@ -137,4 +137,6 @@ L2 L1 可以改成绝对值
 每一次更新w,b参数前， d都需要从新dropout一次 ， 所以每次训练的都不一样
 
 在测试集的时候不做dropout
-![1660657562419](https://user-images.githubusercontent.com/101853621/184895314-3e2e1e4a-37e2-4e0e-9083-92631f8cbd05.png)
+注意：training 的时候丢弃了p%，那么测试集的时候就用1-p%
+
+
