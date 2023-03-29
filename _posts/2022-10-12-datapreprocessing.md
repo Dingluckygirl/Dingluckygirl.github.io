@@ -15,6 +15,7 @@
     X[1,2] =12  #修改
     
     
+    
     # Numpy张量的转换
     A = X.numpy()
     B = torch.tensor(A)
