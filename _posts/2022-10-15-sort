@@ -1,0 +1,33 @@
+# 快速排序
+    
+    def partition(a,l,r):
+        i = l
+        j = r
+        pivot = a[l]
+        while i != j:
+            while i < j and a[j] > pivot:
+                j -= 1
+            while i < j and a[1] <= pivot:
+                i += 1
+            if i<j:
+                a[i],a[j] = a[j],a[i]
+            a[l],a[i] = a[i],a[j]
+            return i
+
+
+    def quicksort(a,l,r):
+        if l>=r:
+            return
+        pivot_idx = partition(a,l,r)
+        quicksort(a,l,pivot_idx-1)
+        quicksort(a,pivot_idx+1,r)
+
+        
+# 冒泡排序
+
+    def bubbleSort(arr):
+        for i in range(1, len(arr)):
+            for j in range(0, len(arr)-i):
+                if arr[j] > arr[j+1]:
+                    arr[j], arr[j + 1] = arr[j + 1], arr[j]
+        return arr
