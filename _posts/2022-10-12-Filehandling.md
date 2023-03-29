@@ -1,5 +1,24 @@
 # 数据处理相关库
+
 # OS库
+
+os.getcwd()：返回当前工作目录的路径。
+
+os.chdir(path)：改变当前工作目录到指定的路径。
+
+os.listdir(path)：返回指定目录下的所有文件和子目录的名称列表。
+
+os.mkdir(path)：创建一个指定名称的目录。
+
+os.makedirs(path)：递归地创建多层目录。
+
+os.rename(src, dst)：将src重命名为dst。
+
+os.remove(path)：删除指定路径的文件。
+
+os.rmdir(path)：删除指定路径的目录（只能删除空目录）。
+
+os.removedirs(path)：递归地删除多层空目录。
 
     import os
 
