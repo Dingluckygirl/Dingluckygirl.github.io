@@ -1,0 +1,16 @@
+# python 的优先队列 heapq
+
+    import heapq
+
+    # 创建一个空的优先队列
+    queue = []
+
+    # 向队列中插入元素
+    heapq.heappush(queue, (2, 'A'))
+    heapq.heappush(queue, (1, 'B'))
+    heapq.heappush(queue, (3, 'C'))
+
+    # 从队列中取出具有最高优先级的元素
+    while queue:
+        item = heapq.heappop(queue)
+        print(item[1])
