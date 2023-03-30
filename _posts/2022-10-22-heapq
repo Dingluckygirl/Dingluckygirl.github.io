@@ -1,5 +1,7 @@
 # python 的优先队列 heapq
 
+优先队列是一种数据结构，它类似于普通队列，但与普通队列不同的是，每个元素都有一个关联的优先级。在优先队列中，具有较高优先级的元素将首先被取出。
+
     import heapq
 
     # 创建一个空的优先队列
@@ -14,3 +16,4 @@
     while queue:
         item = heapq.heappop(queue)
         print(item[1])
+
